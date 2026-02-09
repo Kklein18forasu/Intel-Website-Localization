@@ -1,0 +1,332 @@
+/* Add your CSS here */
+
+/* Hero Section */
+header {
+  /* Intel blue gradient background */
+  background: linear-gradient(135deg, #0071c5 0%, #003d7a 100%);
+  
+  /* Use Flexbox to center all content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Full viewport height for impact */
+  min-height: 100vh;
+  
+  /* Add padding for spacing on smaller screens */
+  padding: 20px;
+}
+
+/* Inner container for logo, heading, and text */
+header div {
+  /* Flexbox column layout to stack elements vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Maximum width for better readability on large screens */
+  max-width: 700px;
+  
+  /* Center the text content */
+  text-align: center;
+}
+
+/* Intel Logo */
+header img {
+  /* Scale logo responsively */
+  width: 120px;
+  height: auto;
+  
+  /* Space between logo and heading */
+  margin-bottom: 30px;
+}
+
+/* Main Heading */
+header h1 {
+  /* White text for contrast against blue background */
+  color: white;
+  
+  /* Large, modern font size */
+  font-size: 48px;
+  
+  /* Readable line height */
+  line-height: 1.4;
+  
+  /* Space between heading and subheading */
+  margin-bottom: 20px;
+  
+  /* Remove default margins for better control */
+  margin-top: 0;
+  
+  /* Responsive font size on mobile */
+  font-weight: 700;
+}
+
+/* Subheading / Description */
+header p {
+  /* White text for contrast */
+  color: white;
+  
+  /* Readable font size */
+  font-size: 18px;
+  
+  /* Good line height for readability */
+  line-height: 1.6;
+  
+  /* Remove default margins */
+  margin: 0;
+  
+  /* Slightly reduced opacity for visual hierarchy */
+  opacity: 0.95;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  header h1 {
+    /* Smaller heading on mobile */
+    font-size: 32px;
+  }
+  
+  header p {
+    /* Smaller text on mobile */
+    font-size: 16px;
+  }
+  
+  header img {
+    /* Smaller logo on mobile */
+    width: 80px;
+  }
+}
+
+/* Reset default body margins */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Timeline Cards Section */
+section {
+  /* Use Flexbox to arrange cards in a row */
+  display: flex;
+  flex-direction: row;
+  
+  /* Allow cards to scroll horizontally */
+  overflow-x: auto;
+  
+  /* Enable smooth scrolling behavior */
+  scroll-behavior: smooth;
+  
+  /* Enable scroll snapping on the horizontal axis */
+  scroll-snap-type: x mandatory;
+  
+  /* Add padding for spacing */
+  padding: 40px 20px;
+  
+  /* Light background to distinguish from header */
+  background-color: #f5f5f5;
+}
+
+/* Individual Milestone Card */
+section div {
+  /* Set fixed width for cards */
+  width: 300px;
+  
+  /* Prevent cards from shrinking */
+  flex-shrink: 0;
+  
+  /* Add spacing between cards */
+  margin-right: 20px;
+  
+  /* Snap cards to the start of the scroll container */
+  scroll-snap-align: start;
+  
+  /* White background for each card */
+  background-color: white;
+  
+  /* Add padding inside cards */
+  padding: 30px;
+  
+  /* Round corners for modern look */
+  border-radius: 12px;
+  
+  /* Subtle border for definition */
+  border: 1px solid #e0e0e0;
+  
+  /* Enhanced shadow for depth and modern appearance */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  /* Smooth transition for hover effects */
+  transition: all 0.3s ease;
+}
+
+/* Card Images */
+section div img {
+  /* Display image as block element */
+  display: block;
+  
+  /* Make image full width of card */
+  width: 100%;
+  
+  /* Set fixed height for consistency */
+  height: 180px;
+  
+  /* Prevent image distortion */
+  object-fit: cover;
+  
+  /* Round top corners to match card */
+  border-radius: 12px 12px 0 0;
+  
+  /* Add space below image */
+  margin-bottom: 20px;
+  
+  /* Smooth image transition */
+  transition: opacity 0.3s ease;
+}
+
+/* Add hover effect to cards */
+section div:hover {
+  /* Lift card on hover with subtle movement */
+  transform: translateY(-8px);
+  
+  /* Enhanced shadow on hover for depth */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  
+  /* Highlight border with Intel blue */
+  border-color: #0071c5;
+}
+
+/* Enhance image on card hover */
+section div:hover img {
+  /* Slightly increase image opacity for depth */
+  opacity: 0.9;
+}
+
+/* Card Heading - Year */
+section h2 {
+  /* Intel blue color for year */
+  color: #0071c5;
+  
+  /* Large font size for year */
+  font-size: 36px;
+  
+  /* Remove default margin */
+  margin: 0 0 10px 0;
+  
+  /* Bold font weight */
+  font-weight: 700;
+  
+  /* Add letter spacing for modern look */
+  letter-spacing: -0.5px;
+}
+
+/* Card Subheading - Title */
+section h3 {
+  /* Dark color for readability */
+  color: #1a1a1a;
+  
+  /* Medium font size */
+  font-size: 20px;
+  
+  /* Add space below title */
+  margin: 0 0 15px 0;
+  
+  /* Medium font weight */
+  font-weight: 600;
+  
+  /* Consistent line height */
+  line-height: 1.3;
+}
+
+/* Card Description Text */
+section p {
+  /* Dark gray for readability */
+  color: #555;
+  
+  /* Standard font size */
+  font-size: 14px;
+  
+  /* Good line height for readability */
+  line-height: 1.6;
+  
+  /* Remove default margin */
+  margin: 0;
+}
+
+/* Remove opacity transition for better mobile support */
+section div:hover p {
+  /* Keep text always visible */
+  opacity: 1;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  /* Timeline Section on Mobile */
+  section {
+    /* Stack cards vertically */
+    flex-direction: column;
+    
+    /* Turn off horizontal scrolling */
+    overflow-x: visible;
+    
+    /* Remove scroll snap on mobile */
+    scroll-snap-type: none;
+    
+    /* Adjust padding for mobile */
+    padding: 20px;
+  }
+  
+  /* Individual Card on Mobile */
+  section div {
+    /* Full width on mobile */
+    width: 100%;
+    
+    /* Remove right margin */
+    margin-right: 0;
+    
+    /* Add bottom margin for spacing between cards */
+    margin-bottom: 20px;
+    
+    /* Remove scroll snap on mobile */
+    scroll-snap-align: none;
+    
+    /* Remove transition effects on mobile */
+    transition: none;
+  }
+  
+  /* Disable all hover effects on mobile devices */
+  section div:hover {
+    /* No lift on mobile */
+    transform: none;
+    
+    /* Keep shadow consistent */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    
+    /* Keep border color consistent */
+    border-color: #e0e0e0;
+  }
+  
+  /* Ensure card text is always visible on mobile */
+  section h2 {
+    /* Make year text readable on mobile */
+    font-size: 28px;
+  }
+  
+  /* Ensure title text is readable on mobile */
+  section h3 {
+    /* Make title text readable on mobile */
+    font-size: 18px;
+  }
+  
+  /* Ensure description text is readable on mobile */
+  section p {
+    /* Make description text readable on mobile */
+    font-size: 14px;
+  }
+  
+  /* Adjust image height on mobile */
+  section div img {
+    /* Reduce image height on smaller screens */
+    height: 150px;
+  }
+}
